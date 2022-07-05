@@ -1,0 +1,28 @@
+.carrousel {
+    position : absolute;
+    top: 25vh;
+    left: 25vw;
+    width : 50vw;
+    height: 50vh;
+    background-color: bisque;
+    transform : scale(0);
+    opacity : 0;
+    transition : opacity 1s, transform 1s;
+
+    &__active {
+        opacity : 1;
+        transform : scale(1);
+    }
+
+    &__figure{
+        position : relative;
+        img{
+            position : absolute;
+            object-fit: cover;
+            opacity : 1;
+            transition : opacity 1s;
+
+        }
+    }
+}
+
