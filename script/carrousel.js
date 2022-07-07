@@ -27,6 +27,7 @@
             elmCarrousel.classList.add('carrousel__ouvrir') 
             index = this.dataset.index
             affiche_carrousel_img()
+            
     }) 
     }
 /**
