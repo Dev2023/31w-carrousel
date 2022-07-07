@@ -15,7 +15,8 @@
     let elmCarrousel__fermeture = document.querySelector('.carrousel__fermeture')
     let elmCarrousel__radio = document.querySelector('.carrousel__radio')
     console.log(elmGalerieImg[0].getAttribute('src'))
-    let index = 0 // L,index qui permettra d'indexer les images du carrousel et les radios bouton
+    let index = 0 // L'index qui permettra d'indexer les images du carrousel et les radios bouton
+    let ancien_index = -1
     for (const img of elmGalerieImg){
         ajouter_elmImg(img)
         ajouter_elmRadio()
@@ -61,7 +62,11 @@
         elmCarrousel__radio.appendChild(elmRadio)
         /* Écouteur pour sélectionner une nouvelle image */ 
         elmRadio.addEventListener('mousedown', function(){    
+            if (ancien_index != -1){
+                elmCarrousel__figure.children[ancien_index].classList.remove('carrousel__figure__img--activer') 
+            }
             elmCarrousel__figure.children[this.dataset.index].classList.add('carrousel__figure__img--activer')
+            ancien_index = this.dataset.index
         })
     }
   
