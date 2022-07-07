@@ -17,12 +17,16 @@
     console.log(elmGalerieImg[0].getAttribute('src'))
     let index = 0 // L'index qui permettra d'indexer les images du carrousel et les radios bouton
     let ancien_index = -1
+    let compteur =0
     for (const img of elmGalerieImg){
+        img.dataset.index = compteur++
         ajouter_elmImg(img)
         ajouter_elmRadio()
         // écouteur sur la galerie pour ouvrir le carrousel
         img.addEventListener('mousedown', function(){
             elmCarrousel.classList.add('carrousel__ouvrir') 
+            index = this.dataset.index
+            affiche_carrousel_img()
     }) 
     }
 /**
@@ -62,13 +66,20 @@
         elmCarrousel__radio.appendChild(elmRadio)
         /* Écouteur pour sélectionner une nouvelle image */ 
         elmRadio.addEventListener('mousedown', function(){    
-            if (ancien_index != -1){
-                elmCarrousel__figure.children[ancien_index].classList.remove('carrousel__figure__img--activer') 
-            }
-            elmCarrousel__figure.children[this.dataset.index].classList.add('carrousel__figure__img--activer')
-            ancien_index = this.dataset.index
+            index = this.dataset.index
+            affiche_carrousel_img()
         })
     }
+
+function affiche_carrousel_img()
+{
+    if (ancien_index != -1){
+        elmCarrousel__figure.children[ancien_index].classList.remove('carrousel__figure__img--activer') 
+    }
+    elmCarrousel__figure.children[index].classList.add('carrousel__figure__img--activer')
+    ancien_index = index
+}
+    
   
 
 
