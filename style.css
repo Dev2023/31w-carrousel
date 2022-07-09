@@ -13,10 +13,10 @@
 
 @media screen and (min-width: 700px) {
   .carrousel {
-    width: 75vw;
-    height: 75vh;
-    top: 12.5vh;
-    left: 12.5vw;
+    width: 50vw;
+    height: 50vh;
+    top: 25vh;
+    left: 25vw;
   }
 }
 
@@ -57,4 +57,3 @@
   margin: 10px;
   display: block;
 }
-/*# sourceMappingURL=style.css.map */
