@@ -4,30 +4,30 @@
     height : 100vh;
     top:0;
     left : 0;
-    background-color: aqua;
+    background-color: #83acbf; /*$color__text-screen*/
     z-index: 9;
     opacity : 0;
     transform : scale(0);
     transition : opacity 1s, transform 1s;
     @media screen and (min-width: 700px) {
-        width : 50vw;
-        height : 50vh;
-        top : 25vh;
-        left: 25vw;
+        width : 70vw;
+        height : 70vh;
+        top : 50vh;
+        left: 15vw;
         
     }
 }
 .carrousel__ouvrir {
     opacity : 1;
     transform : scale(1);
+    
 }
-
-
 
 .carrousel__figure{
     position: absolute;
     width: 100%;
     height: 100%;
+    //margin: 0;//ajout
 }
 
 .carrousel__figure__img{
@@ -56,3 +56,13 @@
   margin : 10px;
   display : block;
 }
+
+.carrousel__fermeture {//ajout
+    background-color: rgb(176, 95, 145);
+    margin-left: 45%;
+    margin-top: 10px;
+    color: aqua;
+    font-size: 20px; 
+   /*  padding: 10px; */ 
+}    
+

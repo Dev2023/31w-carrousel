@@ -2,8 +2,8 @@
 /**
  * Plugin name: Carrousel
  * Description: Carrousel d'images créé à partir d'une galerie d'images
- * Author: Eddy Martin
- * Plugin URI: https://github.com/eddytuto
+ * Author: Yordan Toledano
+ * Plugin URI: https://github.com/Dev2023
  */
 function carrousel_31w_enqueue()
 {
@@ -26,9 +26,9 @@ add_action('wp_enqueue_scripts', 'carrousel_31w_enqueue');
 function genere_carrousel(){
     /////////////////////////////////////// HTML
     // Le conteneur du carrousel
-    $contenu = '<div class="carrousel">';
+    $contenu = '<div class="carrousel" >';
     // Le bouton fermeture
-    $contenu .= '<button class="carrousel__fermeture">X</button>';
+    $contenu .= '<button class="carrousel__fermeture">X</button>'; //style="align-self: center"
     // Le conteneur d'images
     $contenu .= '<figure class="carrousel__figure"></figure>';
     // Le formulaire des radio bouton pour naviguer d'une image à l'autre
