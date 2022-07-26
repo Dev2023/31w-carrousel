@@ -16,12 +16,12 @@
         left: 15vw;
         
     }
-}
+} 
 .carrousel__ouvrir {
     opacity : 1;
     transform : scale(1);
-    
-}
+    border-radius: 10px;
+}    
 
 .carrousel__figure{
     position: absolute;
@@ -37,6 +37,8 @@
     height: 100%;
     opacity : 0;
     transition : opacity 1s, transform 1s;
+    border-end-end-radius: 10px;
+    border-end-start-radius: 10px;
 }
 
 .carrousel__figure__img--activer{
